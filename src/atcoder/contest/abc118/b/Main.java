@@ -1,5 +1,7 @@
-package atcoder.template;
+package atcoder.contest.abc118.b;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -10,23 +12,34 @@ public class Main {
         int m = sc.nextInt();
         sc.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-        String line01 = sc.nextLine();
-        String[] items = line01.split(" ");
-        String line02 = sc.nextLine();
-        int[] q = new int[n];
+        List<String> list = new ArrayList<>();
 
-        for (int i = 0; i < n; i++) {
-            int item = Integer.parseInt(items[i]);
-            q[i] = item;
+        String line01 = sc.nextLine();
+        String[] items01 = line01.split(" ");
+        for (int j=1;j<Integer.parseInt(items01[0])+1;j++) {
+            list.add(items01[j]);
         }
 
-        // 文字列の入力
-        // String s = sc.next();
+        for (int i=1;i<n;i++) {
+            String line = sc.nextLine();
+            String[] items = line.split(" ");
+            for(String s : list) {
+                boolean exist = false;
+                for (int j = 1; j < Integer.parseInt(items[0]) + 1; j++) {
+                    if (s.equals(items[j])) {
+                        exist = true;
+                    }
+                }
+                if (!exist) list.remove(s);
 
-        // 処理
-        int result = 0;
+                if (list.isEmpty()) {
+                    System.out.println(list.size());
+                    return;
+                }
+            }
+        }
 
         // 出力
-        System.out.println(result);
+        System.out.println(list.size());
     }
 }

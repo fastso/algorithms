@@ -1,4 +1,4 @@
-package atcoder.template;
+package atcoder.contest.abc119.d;
 
 import java.util.Scanner;
 

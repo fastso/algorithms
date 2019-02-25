@@ -1,4 +1,4 @@
-package atcoder.template;
+package atcoder.contest.abc119.a;
 
 import java.util.Scanner;
 
@@ -6,16 +6,25 @@ public class Main {
     public static void main(String... args) {
         // 入力
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        String s = sc.next();
 
-        // 文字列の入力
-        // String s = sc.next();
-
-        // 処理
-        int result=0;
-
-        // 出力
-        System.out.println(result);
+        String[] dates = s.split("/");
+        if (Integer.parseInt(dates[0]) < 2019) {
+            System.out.println("Heisei");
+        } else if (Integer.parseInt(dates[0]) > 2019){
+            System.out.println("TBD");
+        } else {
+            if (Integer.parseInt(dates[1]) < 4) {
+                System.out.println("Heisei");
+            } else if (Integer.parseInt(dates[1]) > 4){
+                System.out.println("TBD");
+            } else {
+                if (Integer.parseInt(dates[2]) > 30) {
+                    System.out.println("TBD");
+                } else {
+                    System.out.println("Heisei");
+                }
+            }
+        }
     }
 }
