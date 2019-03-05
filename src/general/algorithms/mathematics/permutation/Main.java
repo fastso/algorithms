@@ -1,4 +1,4 @@
-package general.algorithms.mathematics.combination;
+package general.algorithms.mathematics.permutation;
 
 import java.util.Scanner;
 
@@ -8,13 +8,13 @@ public class Main {
         int n = sc.nextInt();
         int r = sc.nextInt();
 
-        System.out.println(nCr(n, r));
+        System.out.println(nPr(n, r));
     }
 
-    static long nCr(int n, int r) {
+    static long nPr(int n, int r) {
         long num = 1;
-        for (int i = 1; i <= r; i++) {
-            num = num * (n - i + 1) / i;
+        for (int i = n; i > (n - r); i--) {
+            num *= i;
         }
         return num;
     }
