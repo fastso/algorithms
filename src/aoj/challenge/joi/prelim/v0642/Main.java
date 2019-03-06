@@ -1,12 +1,30 @@
-package aoj.challenge.pck.prelim.v0380;
+package aoj.challenge.joi.prelim.v0642;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String... args) {
         Scanner sc = new Scanner(System.in);
-        int f = sc.nextInt();
+        int n = sc.nextInt();
+        List<Integer> list = new ArrayList<>();
 
-        System.out.println((f-30)/2);
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (sc.nextInt() == 0) {
+                count = 0;
+                continue;
+            }
+            count++;
+            list.add(count);
+        }
+
+        if (list.isEmpty()) {
+            System.out.println(1);
+        } else {
+            System.out.println(Collections.max(list) + 1);
+        }
     }
 }

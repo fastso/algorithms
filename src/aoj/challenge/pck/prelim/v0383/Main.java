@@ -1,4 +1,4 @@
-package aoj.challenge.pck.prelim.v383;
+package aoj.challenge.pck.prelim.v0383;
 
 import java.util.Scanner;
 
