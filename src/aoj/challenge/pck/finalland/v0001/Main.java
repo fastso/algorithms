@@ -1,4 +1,4 @@
-package aoj.vol.volume0.v0001;
+package aoj.challenge.pck.finalland.v0001;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package aoj.vol.volume0.v0000;
+package aoj.challenge.pck.finalland.v0000;
 
 public class Main {
     public static void main(String[] a) {
