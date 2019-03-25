@@ -40,6 +40,23 @@
 
 ### Fibonacci number / フィボナッチ数列
 
+```java:メモ化再帰によるフィボナッチ数列
+fibonacci(n)
+  if n==0 || n == 1
+    return F[n] = 1
+  if F[n] が計算済み
+    return F[n]
+  return F[n] = fibonacci(n-2) + fibonacci(n-1)
+```
+
+```java:動的計画法によるフィボナッチ数列
+fibonacci(n)
+  F[0] = 1
+  F[1] = 1
+  for i が 2 から n まで
+    F[i] = F[i-2] + F[i-1]
+```
+
 ### 最長共通部分列
 
 ### 連鎖行列積
