@@ -40,7 +40,8 @@
 
 ### Fibonacci number / フィボナッチ数列
 
-```java:メモ化再帰によるフィボナッチ数列
+```java
+// メモ化再帰によるフィボナッチ数列
 fibonacci(n)
   if n==0 || n == 1
     return F[n] = 1
@@ -49,7 +50,8 @@ fibonacci(n)
   return F[n] = fibonacci(n-2) + fibonacci(n-1)
 ```
 
-```java:動的計画法によるフィボナッチ数列
+```java
+// 動的計画法によるフィボナッチ数列
 fibonacci(n)
   F[0] = 1
   F[1] = 1
