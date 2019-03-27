@@ -1,21 +1,27 @@
 package leetcode;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Solution {
+    public static void main(String... args) {
 
-}
+    }
 
-class Main {
-    public int numUniqueEmails(String[] emails) {
-        Set<String> set = new HashSet<>();
-        for (String s : emails) {
-            String[] mail = s.split("@");
-            String[] name = s.split("\\+");
-            String realName = name[0].replace(".","");
-            String realEmail = realName + "@" + mail[1];
-            set.add(realEmail);
+    public int[] sortArrayByParity(int[] A) {
+        int[] result = new int[A.length];
+
+        int i1 = 0;
+        int i2 = A.length-1;
+        for (int i = 0; i < A.length; i++) {
+            if (A[i]%2 == 0) {
+                result[i1] = A[i];
+                i1++;
+            } else {
+                result[i2] = A[i];
+                i2--;
+            }
         }
-        return set.size();
+        return result;
     }
 }

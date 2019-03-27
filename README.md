@@ -18,6 +18,11 @@
 1. 部分問題を再帰的に解く。
 1. 得られた部分問題の解を「統合」して、元の問題を解く。
 
+Two important things of implementing a recursion function:
+
+1. Base Case / ベースケース
+1. Recurrence Relation / 漸化式
+
 ### Exhaustive Search(Brute-force Search) / 全探索
 
 ### Koch Curve / コッホ曲線
@@ -59,7 +64,7 @@ fibonacci(n)
     F[i] = F[i-2] + F[i-1]
 ```
 
-### 最長共通部分列
+### PLS (Longest Common Subsequence problem) / 最長共通部分列
 
 ### 連鎖行列積
 
