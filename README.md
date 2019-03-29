@@ -29,7 +29,7 @@ Two important things of implementing a recursion function:
 
 ## 7. 高等的整列
 
-## 8. 木
+## 8. Tree / 木
 
 ### 木構造の概要
 
@@ -53,11 +53,13 @@ Two important things of implementing a recursion function:
 
 ### 根付き木の表現
 
-
 ### 二分木の表現
+
 ### 木の巡回
+
 ### 木の巡回の応用：木の復元
 
+未完了
 
 ## 9. 二分探索木
 

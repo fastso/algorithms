@@ -1,7 +1,7 @@
 package leetcode;
 
-import java.lang.reflect.Array;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Solution {
     public static void main(String... args) {
@@ -10,41 +10,61 @@ public class Solution {
 //        int[] A = {2,1,2,5,3,2};
 //        System.out.println(sol.repeatedNTimes(A));
 
-        System.out.println(sol.judgeCircle("LDRRLRUULR"));
+        System.out.println(sol.hammingDistance(1, 4));
     }
 
-    public boolean judgeCircle(String moves) {
-        int rl = 0;
-        int ud = 0;
+    public int hammingDistance(int x, int y) {
+        char[] xc = Integer.toBinaryString(x).toCharArray();
+        char[] yc = Integer.toBinaryString(y).toCharArray();
+        int d = 0;
 
-        char[] cMoves = moves.toCharArray();
-        for (char c : cMoves) {
-            switch (c) {
-                case 'U' :
-                    ud++;
-                    break;
-                case 'D' :
-                    ud--;
-                    break;
-                case 'L' :
-                    rl++;
-                    break;
-                case 'R' :
-                    rl--;
-                    break;
+        for (int i = xc.length - 1, j = yc.length - 1; i >= 0 || j >= 0; i--, j--) {
+            if (i < 0) {
+                if (yc[j] == '1') {
+                    d++;
+                }
+                continue;
+            } else if (j < 0) {
+                if (xc[i] == '1') {
+                    d++;
+                }
+                continue;
+            }
+            if (xc[i] != yc[j]) {
+                d++;
             }
         }
-        if (rl == 0 && ud == 0) return true;
-        else return false;
+        return d;
     }
+
+    public int[] diStringMatch(String S) {
+        char[] c = S.toCharArray();
+        int[] result = new int[S.length() + 1];
+        int min = 0;
+        int max = S.length();
+
+        for (int i = 0; i < c.length; i++) {
+            if (c[i] == 'I') {
+                result[i] = min;
+                min++;
+                if (i == c.length - 1) result[c.length] = min;
+            } else {
+                result[i] = max;
+                max--;
+                if (i == c.length - 1) result[c.length] = max;
+            }
+        }
+        return result;
+    }
+
 
     public int repeatedNTimes(int[] A) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int x : A) {
-            map.put(x, map.getOrDefault(x,0)+1);
+            map.put(x, map.getOrDefault(x, 0) + 1);
         }
 
-        for (int k:map.keySet()) {
+        for (int k : map.keySet()) {
             if (map.get(k) > 1) return k;
         }
         return 0;
