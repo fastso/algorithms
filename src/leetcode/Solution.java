@@ -15,9 +15,57 @@ public class Solution {
 
 //        System.out.println(sol.hammingDistance(1, 4));
 
-        System.out.println(sol.selfDividingNumbers(25, 25));
+//        System.out.println(sol.selfDividingNumbers(25, 25));
+//        System.out.println(sol.prefixesDivBy5(new int[]{0,1,1,1,1,1}));
+        System.out.println(Arrays.toString(sol.sortArrayByParityII(new int[]{4,2,5,7})));
     }
 
+    public int[] sortArrayByParityII(int[] A) {
+        int[] odd = new int[A.length/2];
+        int[] even = new int[A.length/2];
+
+        int o=0;
+        int e=0;
+        for (int i=0;i<A.length;i++) {
+            if (A[i]%2 == 0) {
+                odd[o++] = A[i];
+            } else {
+                even[e++] = A[i];
+            }
+        }
+
+        for (int i=0;i<A.length;i+=2) {
+            A[i] = odd[i/2];
+            A[i+1] = even[i/2];
+        }
+
+        return A;
+    }
+
+    public int arrayPairSum(int[] nums) {
+        int result = 0;
+        Arrays.sort(nums);
+        for (int i=0;i<nums.length;i+=2) {
+            result += nums[i];
+        }
+        return result;
+    }
+
+    /**
+     * 1010または101または1111
+     *
+     * @param A
+     * @return
+     */
+    public List<Boolean> prefixesDivBy5(int[] A) {
+        int x = 0;
+        List<Boolean> list = new ArrayList<>();
+        for (int a : A) {
+            x = (x << 1 | a) % 5;
+            list.add(x == 0);
+        }
+        return list;
+    }
 
     public List<Integer> selfDividingNumbers(int left, int right) {
         List<Integer> list = new ArrayList<>();
