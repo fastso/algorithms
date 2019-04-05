@@ -17,7 +17,32 @@ public class Solution {
 
 //        System.out.println(sol.selfDividingNumbers(25, 25));
 //        System.out.println(sol.prefixesDivBy5(new int[]{0,1,1,1,1,1}));
-        System.out.println(Arrays.toString(sol.sortArrayByParityII(new int[]{4,2,5,7})));
+//        System.out.println(Arrays.toString(sol.sortArrayByParityII(new int[]{4,2,5,7})));
+//        System.out.println(sol.findComplement(5));
+        System.out.println(sol.toGoatLatin("I speak Goat Latin"));
+    }
+
+    public String toGoatLatin(String S) {
+        String[] arr = S.split(" ");
+        StringBuilder result = new StringBuilder();
+        StringBuilder a = new StringBuilder();
+
+        for (int i=0;i<arr.length;i++) {
+            a.append("a");
+            char[] c = arr[i].toCharArray();
+            if (c[0] == 'a' || c[0] == 'i' || c[0] == 'u' || c[0] == 'e' || c[0] == 'o'
+            || c[0] == 'A' || c[0] == 'I' || c[0] == 'U' || c[0] == 'E' || c[0] == 'O') {
+                result.append(arr[i]).append("ma").append(a).append(" ");
+            } else {
+                char temp = c[0];
+                result.append(String.valueOf(c).substring(1)).append(temp).append("ma").append(a).append(" ");
+            }
+        }
+        return result.deleteCharAt(result.length()-1).toString();
+    }
+
+    public int findComplement(int num) {
+        return ~num & ((Integer.highestOneBit(num) << 1) - 1);
     }
 
     public int[] sortArrayByParityII(int[] A) {
