@@ -19,7 +19,59 @@ public class Solution {
 //        System.out.println(sol.prefixesDivBy5(new int[]{0,1,1,1,1,1}));
 //        System.out.println(Arrays.toString(sol.sortArrayByParityII(new int[]{4,2,5,7})));
 //        System.out.println(sol.findComplement(5));
-        System.out.println(sol.toGoatLatin("I speak Goat Latin"));
+//        System.out.println(sol.toGoatLatin("I speak Goat Latin"));
+//        System.out.println(sol.rotatedDigits(857));
+//        System.out.println(sol.commonChars(new String[]{"cool", "lock", "cook"}));
+        System.out.println(sol.isMonotonic(new int[]{1,2,1,4}));
+    }
+
+    public boolean isMonotonic(int[] A) {
+        int less = 0;
+        int more = 0;
+
+        if (A.length == 1) return true;
+        for (int i = 0; i < A.length-1; i++) {
+            if (A[i] == A[i+1]) {
+                continue;
+            } else if (A[i] < A[i+1]) {
+                more++;
+            } else {
+                less++;
+            }
+
+            if (more > 0 && less > 0) return false;
+        }
+        return true;
+    }
+
+    public List<String> commonChars(String[] A) {
+        List<String> result = new ArrayList<>();
+        String[] s = A[0].split("");
+        for (int i = 0; i < s.length; i++) {
+            int count = 1;
+            for (int j = 1; j < A.length; j++) {
+                if (A[j].contains(s[i])) {
+                    count++;
+                    A[j] = A[j].replaceFirst(s[i], "");
+                }
+            }
+            if (count == A.length) result.add(s[i]);
+        }
+        return result;
+    }
+
+    public int rotatedDigits(int N) {
+        String s = null;
+        int count = 0;
+        for (int i = 1; i <= N; i++) {
+            s = String.valueOf(i);
+            if (s.contains("3") || s.contains("4") || s.contains("7")) {
+                continue;
+            } else if (s.contains("2") || s.contains("5") || s.contains("6") || s.contains("9")) {
+                count++;
+            }
+        }
+        return count;
     }
 
     public String toGoatLatin(String S) {
@@ -27,18 +79,18 @@ public class Solution {
         StringBuilder result = new StringBuilder();
         StringBuilder a = new StringBuilder();
 
-        for (int i=0;i<arr.length;i++) {
+        for (int i = 0; i < arr.length; i++) {
             a.append("a");
             char[] c = arr[i].toCharArray();
             if (c[0] == 'a' || c[0] == 'i' || c[0] == 'u' || c[0] == 'e' || c[0] == 'o'
-            || c[0] == 'A' || c[0] == 'I' || c[0] == 'U' || c[0] == 'E' || c[0] == 'O') {
+                    || c[0] == 'A' || c[0] == 'I' || c[0] == 'U' || c[0] == 'E' || c[0] == 'O') {
                 result.append(arr[i]).append("ma").append(a).append(" ");
             } else {
                 char temp = c[0];
                 result.append(String.valueOf(c).substring(1)).append(temp).append("ma").append(a).append(" ");
             }
         }
-        return result.deleteCharAt(result.length()-1).toString();
+        return result.deleteCharAt(result.length() - 1).toString();
     }
 
     public int findComplement(int num) {
@@ -46,22 +98,22 @@ public class Solution {
     }
 
     public int[] sortArrayByParityII(int[] A) {
-        int[] odd = new int[A.length/2];
-        int[] even = new int[A.length/2];
+        int[] odd = new int[A.length / 2];
+        int[] even = new int[A.length / 2];
 
-        int o=0;
-        int e=0;
-        for (int i=0;i<A.length;i++) {
-            if (A[i]%2 == 0) {
+        int o = 0;
+        int e = 0;
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] % 2 == 0) {
                 odd[o++] = A[i];
             } else {
                 even[e++] = A[i];
             }
         }
 
-        for (int i=0;i<A.length;i+=2) {
-            A[i] = odd[i/2];
-            A[i+1] = even[i/2];
+        for (int i = 0; i < A.length; i += 2) {
+            A[i] = odd[i / 2];
+            A[i + 1] = even[i / 2];
         }
 
         return A;
@@ -70,7 +122,7 @@ public class Solution {
     public int arrayPairSum(int[] nums) {
         int result = 0;
         Arrays.sort(nums);
-        for (int i=0;i<nums.length;i+=2) {
+        for (int i = 0; i < nums.length; i += 2) {
             result += nums[i];
         }
         return result;
