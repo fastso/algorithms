@@ -22,7 +22,71 @@ public class Solution {
 //        System.out.println(sol.toGoatLatin("I speak Goat Latin"));
 //        System.out.println(sol.rotatedDigits(857));
 //        System.out.println(sol.commonChars(new String[]{"cool", "lock", "cook"}));
-        System.out.println(sol.isMonotonic(new int[]{1,2,1,4}));
+//        System.out.println(sol.isMonotonic(new int[]{1,2,1,4}));
+        System.out.println(Arrays.toString(sol.twoSum(new int[]{0, 0, 3, 4}, 0)));
+    }
+
+    public int[][] imageSmoother(int[][] M) {
+        int result[][] = new int[M.length][M[0].length];
+        int sum = 0;
+        int n = 0;
+        for (int i = 0; i < M.length; i++) {
+            for (int j = 0; j < M[0].length; j++) {
+                sum = 0;
+                n = 0;
+                if (i-1 >= 0) {
+                    if (j-1 >=0) {
+                        sum += M[i-1][j-1];
+                        n++;
+                    }
+                    sum += M[i-1][j];
+                    n++;
+                    if (j+1 < M[0].length) {
+                        sum += M[i-1][j+1];
+                        n++;
+                    }
+                }
+
+                if (j-1 >=0) {
+                    sum += M[i][j-1];
+                    n++;
+                }
+                sum += M[i][j];
+                n++;
+                if (j+1 < M[0].length) {
+                    sum += M[i][j+1];
+                    n++;
+                }
+
+                if (i+1 < M.length) {
+                    if (j-1 >=0) {
+                        sum += M[i+1][j-1];
+                        n++;
+                    }
+                    sum += M[i+1][j];
+                    n++;
+                    if (j+1 < M[0].length) {
+                        sum += M[i+1][j+1];
+                        n++;
+                    }
+                }
+
+                result[i][j] = sum / n;
+            }
+        }
+
+        return result;
+    }
+
+    public int[] twoSum(int[] numbers, int target) {
+        for (int i = 0; i < numbers.length - 1; i++) {
+            for (int j = i + 1; j < numbers.length; j++) {
+                if (numbers[i] + numbers[j] == target) {
+                    return new int[]{i + 1, j + 1};
+                }
+            }
+        }
+        return new int[]{};
     }
 
     public boolean isMonotonic(int[] A) {
@@ -30,10 +94,10 @@ public class Solution {
         int more = 0;
 
         if (A.length == 1) return true;
-        for (int i = 0; i < A.length-1; i++) {
-            if (A[i] == A[i+1]) {
+        for (int i = 0; i < A.length - 1; i++) {
+            if (A[i] == A[i + 1]) {
                 continue;
-            } else if (A[i] < A[i+1]) {
+            } else if (A[i] < A[i + 1]) {
                 more++;
             } else {
                 less++;
