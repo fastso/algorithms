@@ -23,7 +23,14 @@ public class Solution {
 //        System.out.println(sol.rotatedDigits(857));
 //        System.out.println(sol.commonChars(new String[]{"cool", "lock", "cook"}));
 //        System.out.println(sol.isMonotonic(new int[]{1,2,1,4}));
-        System.out.println(Arrays.toString(sol.twoSum(new int[]{0, 0, 3, 4}, 0)));
+//        System.out.println(Arrays.toString(sol.twoSum(new int[]{0, 0, 3, 4}, 0)));
+        System.out.println(sol.thirdMax(new int[]{1, 2}));
+    }
+
+    public int thirdMax(int[] nums) {
+        int[] arr = Arrays.stream(nums).distinct().sorted().toArray();
+
+        return arr.length < 3 ? arr[arr.length - 1] : arr[arr.length - 3];
     }
 
     public int[][] imageSmoother(int[][] M) {
@@ -34,39 +41,39 @@ public class Solution {
             for (int j = 0; j < M[0].length; j++) {
                 sum = 0;
                 n = 0;
-                if (i-1 >= 0) {
-                    if (j-1 >=0) {
-                        sum += M[i-1][j-1];
+                if (i - 1 >= 0) {
+                    if (j - 1 >= 0) {
+                        sum += M[i - 1][j - 1];
                         n++;
                     }
-                    sum += M[i-1][j];
+                    sum += M[i - 1][j];
                     n++;
-                    if (j+1 < M[0].length) {
-                        sum += M[i-1][j+1];
+                    if (j + 1 < M[0].length) {
+                        sum += M[i - 1][j + 1];
                         n++;
                     }
                 }
 
-                if (j-1 >=0) {
-                    sum += M[i][j-1];
+                if (j - 1 >= 0) {
+                    sum += M[i][j - 1];
                     n++;
                 }
                 sum += M[i][j];
                 n++;
-                if (j+1 < M[0].length) {
-                    sum += M[i][j+1];
+                if (j + 1 < M[0].length) {
+                    sum += M[i][j + 1];
                     n++;
                 }
 
-                if (i+1 < M.length) {
-                    if (j-1 >=0) {
-                        sum += M[i+1][j-1];
+                if (i + 1 < M.length) {
+                    if (j - 1 >= 0) {
+                        sum += M[i + 1][j - 1];
                         n++;
                     }
-                    sum += M[i+1][j];
+                    sum += M[i + 1][j];
                     n++;
-                    if (j+1 < M[0].length) {
-                        sum += M[i+1][j+1];
+                    if (j + 1 < M[0].length) {
+                        sum += M[i + 1][j + 1];
                         n++;
                     }
                 }

@@ -1,8 +1,11 @@
-package general.algorithms.mathematics.permutation;
+package general.algorithms.mathematics;
 
 import java.util.Scanner;
 
-public class Main {
+/**
+ * 順列
+ */
+public class Permutation {
     public static void main(String... args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

@@ -1,8 +1,11 @@
-package general.algorithms.mathematics.gcd;
+package general.algorithms.mathematics;
 
 import java.util.Scanner;
 
-public class Main {
+/**
+ * 最大公約数と最小公倍数
+ */
+public class GCD {
     public static void main(String... args) {
         Scanner sc = new Scanner(System.in);
         long a = sc.nextLong();

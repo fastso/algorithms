@@ -3,6 +3,9 @@ package general.algorithms.mathematics;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * 組合せ
+ */
 public class Combination {
     public static void main(String... args) {
         Combination cb = new Combination();
