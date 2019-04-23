@@ -24,7 +24,61 @@ public class Solution {
 //        System.out.println(sol.commonChars(new String[]{"cool", "lock", "cook"}));
 //        System.out.println(sol.isMonotonic(new int[]{1,2,1,4}));
 //        System.out.println(Arrays.toString(sol.twoSum(new int[]{0, 0, 3, 4}, 0)));
-        System.out.println(sol.thirdMax(new int[]{1, 2}));
+//        System.out.println(sol.thirdMax(new int[]{1, 2}));
+//        System.out.println(sol.fib(3));
+    }
+
+    public int[] sumEvenAfterQueries(int[] A, int[][] queries) {
+        int[] result = new int[queries.length];
+        int sum = 0;
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] % 2 == 0) sum += A[i];
+        }
+
+        for (int i = 0; i < queries.length; i++) {
+            if (A[queries[i][1]] % 2 == 0) sum -= A[queries[i][1]];
+            A[queries[i][1]] += queries[i][0];
+            if (A[queries[i][1]] % 2 == 0) sum += A[queries[i][1]];
+            result[i] = sum;
+        }
+
+        return result;
+    }
+
+    public int[][] transpose(int[][] A) {
+        int[][] b = new int[A[0].length][A.length];
+
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A[0].length; j++) {
+                b[j][i] = A[i][j];
+            }
+        }
+        return b;
+    }
+
+    public int fib(int N) {
+        if (N == 0) return 0;
+        if (N == 1) return 1;
+        int[] f = new int[N + 1];
+        f[0] = 0;
+        f[1] = 1;
+
+        for (int i = 2; i <= N; i++) {
+            f[i] = f[i - 1] + f[i - 2];
+        }
+        return f[N];
+    }
+
+    public String reverseWords(String s) {
+        String[] words = s.split(" ");
+        StringBuilder result = new StringBuilder();
+        for (String word : words) {
+            StringBuilder sb = new StringBuilder(word);
+            sb.reverse();
+            result.append(sb + " ");
+        }
+        result.deleteCharAt(result.length() - 1);
+        return result.toString();
     }
 
     public int thirdMax(int[] nums) {
