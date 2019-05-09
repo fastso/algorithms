@@ -1,10 +1,6 @@
 package leetcode;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Solution {
     public static void main(String... args) {
@@ -26,6 +22,45 @@ public class Solution {
 //        System.out.println(Arrays.toString(sol.twoSum(new int[]{0, 0, 3, 4}, 0)));
 //        System.out.println(sol.thirdMax(new int[]{1, 2}));
 //        System.out.println(sol.fib(3));
+        System.out.println(sol.findJudge(3, new int[][]{{1, 3}, {2, 3}, {3, 1}}));
+    }
+
+    public boolean divisorGame(int N) {
+        return N % 2 == 0;
+    }
+
+    public String mostCommonWord(String paragraph, String[] banned) {
+        String replaced = paragraph.replaceAll("\\!|\\?|\\'|\\,|\\;|\\.", " ").toLowerCase();
+        String[] arr = replaced.split("\\s+");
+        Set<String> bannedSet = new HashSet<>(Arrays.asList(banned));
+
+        Map<String, Integer> map = new HashMap<>();
+        for (String s : arr) {
+            if (bannedSet.contains(s)) continue;
+            map.put(s, map.getOrDefault(s, 0) + 1);
+        }
+        return Collections.max(map.entrySet(),Map.Entry.comparingByValue()).getKey();
+    }
+
+    public int findJudge(int N, int[][] trust) {
+        if (N == 1) return 1;
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < trust.length; i++) {
+            set.add(trust[i][0]);
+        }
+
+        for (int i = 0; i < trust.length; i++) {
+            if (!set.contains(trust[i][1])) {
+                int count = 0;
+                for (int j = 0; j < trust.length; j++) {
+                    if (trust[j][1] == trust[i][1]) count++;
+                }
+                if (count == N - 1) {
+                    return trust[i][1];
+                }
+            }
+        }
+        return -1;
     }
 
     public int[] sumEvenAfterQueries(int[] A, int[][] queries) {
