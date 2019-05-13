@@ -25,6 +25,15 @@ public class Solution {
         System.out.println(sol.findJudge(3, new int[][]{{1, 3}, {2, 3}, {3, 1}}));
     }
 
+    public boolean detectCapitalUse(String word) {
+        String upper = word.toUpperCase();
+        String lower = word.toLowerCase();
+        String proper = word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase();
+
+        if (word.equals(upper) || word.equals(lower) || word.equals(proper)) return true;
+        else return false;
+    }
+
     public boolean divisorGame(int N) {
         return N % 2 == 0;
     }
@@ -39,7 +48,7 @@ public class Solution {
             if (bannedSet.contains(s)) continue;
             map.put(s, map.getOrDefault(s, 0) + 1);
         }
-        return Collections.max(map.entrySet(),Map.Entry.comparingByValue()).getKey();
+        return Collections.max(map.entrySet(), Map.Entry.comparingByValue()).getKey();
     }
 
     public int findJudge(int N, int[][] trust) {
