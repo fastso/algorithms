@@ -1,6 +1,9 @@
 package leetcode;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.*;
+import java.util.logging.FileHandler;
 
 public class Solution {
     public static void main(String... args) {
@@ -22,7 +25,35 @@ public class Solution {
 //        System.out.println(Arrays.toString(sol.twoSum(new int[]{0, 0, 3, 4}, 0)));
 //        System.out.println(sol.thirdMax(new int[]{1, 2}));
 //        System.out.println(sol.fib(3));
-        System.out.println(sol.findJudge(3, new int[][]{{1, 3}, {2, 3}, {3, 1}}));
+//        System.out.println(sol.findJudge(3, new int[][]{{1, 3}, {2, 3}, {3, 1}}));
+        System.out.println(sol.isLongPressedName("alex", "aaleex"));
+    }
+
+    public void javaIO() throws IOException {
+        File file = new File("file.txt"); // There's no file yet!
+        boolean newFile = file.createNewFile(); // If file don's exist then create an actual file.
+    }
+
+    public boolean isLongPressedName(String name, String typed) {
+        char[] names = name.toCharArray();
+        char[] typeds = typed.toCharArray();
+
+        int i = 0, j = 0;
+        while (i < names.length && j < typeds.length) {
+            if (names[i] == typeds[j]) {
+                i++;
+                j++;
+            } else {
+                if (j > 0 && typeds[j] == typeds[j - 1]) {
+                    j++;
+                } else {
+                    return false;
+                }
+            }
+        }
+
+        if (i == names.length) return true;
+        else return false;
     }
 
     public boolean detectCapitalUse(String word) {
