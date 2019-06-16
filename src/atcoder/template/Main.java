@@ -9,7 +9,6 @@ public class Main {
         int n = sc.nextInt();
         int m = sc.nextInt();
         sc.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-
         String line01 = sc.nextLine();
         String[] items = line01.split(" ");
         String line02 = sc.nextLine();
