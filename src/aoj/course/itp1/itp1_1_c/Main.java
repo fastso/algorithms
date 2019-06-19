@@ -1,4 +1,4 @@
-package aoj.course.introduction1.itp1_1_c;
+package aoj.course.itp1.itp1_1_c;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package aoj.course.introductionad.alds1_1_b;
+package aoj.course.alds1.alds1_1_b;
 
 import java.util.Scanner;
 

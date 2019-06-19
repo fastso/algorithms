@@ -1,18 +1,18 @@
 package aoj;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String... args) {
         Scanner sc = new Scanner(System.in);
-        int[] arr = new int[3];
-        arr[0] = sc.nextInt();
-        arr[1] = sc.nextInt();
-        arr[2] = sc.nextInt();
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int c = sc.nextInt();
 
-        Arrays.sort(arr);
-
-        System.out.println(arr[0] + " " + arr[1] + " " + arr[2]);
+            int sum = 0;
+            for(int i=a;i<=b;i++) {
+                if (c % i == 0) sum++;
+            }
+            System.out.println(sum);
     }
 }

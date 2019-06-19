@@ -1,4 +1,4 @@
-package aoj.course.introduction1.itp1_1_a;
+package aoj.course.itp1.itp1_1_a;
 
 public class Main {
     public static void main(String... args) {
