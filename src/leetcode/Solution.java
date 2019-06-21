@@ -26,7 +26,62 @@ public class Solution {
 //        System.out.println(sol.thirdMax(new int[]{1, 2}));
 //        System.out.println(sol.fib(3));
 //        System.out.println(sol.findJudge(3, new int[][]{{1, 3}, {2, 3}, {3, 1}}));
-        System.out.println(sol.isLongPressedName("alex", "aaleex"));
+//        System.out.println(sol.isLongPressedName("alex", "aaleex"));
+        System.out.println(Arrays.toString(sol.plusOne(new int[]{9,8,7,6,5,4,3,2,1,0})));
+    }
+
+
+    public String intArrayToString(int[] a) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < a.length; i++) {
+            sb.append(a[i]);
+        }
+        return (sb.toString());
+    }
+
+    public int[] plusOne(int[] digits) {
+        String ds = intArrayToString(digits);
+        long n = Long.valueOf(ds);
+        n++;
+        String[] sa = String.valueOf(n).split("");
+        int[] result = new int[sa.length];
+        for (int i=0;i<sa.length;i++) {
+            result[i] = Integer.valueOf(sa[i]);
+        }
+        return result;
+    }
+
+    public int dominantIndex(int[] nums) {
+        if (nums.length == 1) return 0;
+        int[] n = nums.clone();
+        n = Arrays.stream(n).boxed().sorted(Comparator.reverseOrder()).mapToInt(Integer::intValue).toArray();
+
+        if (n[1] != 0 && n[0] / n[1] < 2) {
+            return -1;
+        } else {
+            for (int i = 0; i < nums.length; i++) {
+                if (nums[i] == n[0]) return i;
+            }
+        }
+        return -1;
+    }
+
+    public int pivotIndex(int[] nums) {
+        if (nums.length == 0) return -1;
+
+        int left = 0;
+        int right = 0;
+
+        for (int n : nums) {
+            right += n;
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (i > 0) left += nums[i - 1];
+            right -= nums[i];
+            if (left == right) return i;
+        }
+        return -1;
     }
 
     public void javaIO() throws IOException {

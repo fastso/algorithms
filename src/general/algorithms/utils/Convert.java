@@ -10,6 +10,14 @@ public class Convert {
         System.out.println(new Convert().romanToInt(s));
     }
 
+    public static String intArrayToString(int[] a) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < a.length; i++) {
+            sb.append(a[i]);
+        }
+        return (sb.toString());
+    }
+
     /**
      * ローマ数字文字列からintに変換する。
      * Symbol       Value
