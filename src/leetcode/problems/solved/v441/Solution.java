@@ -1,4 +1,4 @@
-package leetcode.problems.v441;
+package leetcode.problems.solved.v441;
 
 public class Solution {
     public int arrangeCoins(int n) {

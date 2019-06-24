@@ -1,4 +1,4 @@
-package leetcode.problems.v989;
+package leetcode.problems.solved.v989;
 
 import java.math.BigInteger;
 import java.util.ArrayList;

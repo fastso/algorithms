@@ -1,6 +1,4 @@
-package leetcode.problems.v717;
-
-import java.util.Scanner;
+package leetcode.problems.solved.v717;
 
 public class Solution {
     public boolean isOneBitCharacter(int[] bits) {

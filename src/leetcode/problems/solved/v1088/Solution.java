@@ -1,4 +1,4 @@
-package leetcode.problems.v1088;
+package leetcode.problems.solved.v1088;
 
 public class Solution {
     public static void main(String... args) {

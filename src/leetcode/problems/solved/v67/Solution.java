@@ -1,4 +1,4 @@
-package leetcode.problems.v67;
+package leetcode.problems.solved.v67;
 
 import java.util.Scanner;
 

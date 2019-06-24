@@ -1,4 +1,4 @@
-package leetcode.problems.v258;
+package leetcode.problems.solved.v258;
 
 public class Solution {
     public int addDigits(int num) {
