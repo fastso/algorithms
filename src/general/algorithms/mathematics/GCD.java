@@ -36,6 +36,6 @@ public class GCD {
      * @return
      */
     static long lcm(long a, long b) {
-        return a * b / gcd(a, b);
+        return a / gcd(a, b) * b;
     }
 }
