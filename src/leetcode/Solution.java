@@ -27,7 +27,8 @@ public class Solution {
 //        System.out.println(sol.fib(3));
 //        System.out.println(sol.findJudge(3, new int[][]{{1, 3}, {2, 3}, {3, 1}}));
 //        System.out.println(sol.isLongPressedName("alex", "aaleex"));
-        System.out.println(Arrays.toString(sol.plusOne(new int[]{9, 8, 7, 6, 5, 4, 3, 2, 1, 0})));
+//        System.out.println(Arrays.toString(sol.plusOne(new int[]{9, 8, 7, 6, 5, 4, 3, 2, 1, 0})));
+        System.out.println(3.0/2);
     }
 
     public int[] findDiagonalOrder(int[][] matrix) {
