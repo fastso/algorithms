@@ -1,7 +1,4 @@
-package general.algorithms.utils;
-
-import java.util.Arrays;
-import java.util.Collections;
+package general.algorithms.String;
 
 public class Strings {
     public static void main(String... args) {

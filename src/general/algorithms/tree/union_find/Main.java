@@ -1,4 +1,4 @@
-package general.datastructures.tree.union_find;
+package general.algorithms.tree.union_find;
 
 public class Main {
     public static void main(String... args) {
