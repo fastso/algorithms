@@ -1,0 +1,9 @@
+
+psquid:S00117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©‰„Â8‘⁄¢ﬁµ-
+fsquid:HiddenFieldCheck<"8Rename "list" which hides the field declared at line 16.(§ ÌÖ˝ˇˇˇˇ8‘⁄¢ﬁµ-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(⁄¸ÙÒ8ú˙©ﬁµ-
+Äsquid:S1488"]Immediately return this expression instead of assigning it to the temporary variable "array".(€ÎÄÆ˘ˇˇˇˇ8áÉ©ﬁµ-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ïÕ®“8ùåﬁ‹µ-
+Ö"squid:ClassVariableVisibilityCheck"PMake list a static final constant or non-public and provide accessors if needed.(˝ú„ê8Øì†ﬁµ-
+usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸«†¿˚ˇˇˇˇ8£èÿ›µ-

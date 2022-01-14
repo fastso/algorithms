@@ -1,0 +1,20 @@
+
+psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î›Ïí8ò¦¾º-
+Dsquid:S1172B"&Remove these unused method parameters.(÷½‰£8ªÎº-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¶¶•ú8¾¬Áº-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(é¦²´8Œ¡êº-
+usquid:S00117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶ı¯’ûÿÿÿÿ8ò¦¾º-
+[
+squid:S106S"9Replace this use of System.out or System.err by a logger.(åö¡½úÿÿÿÿ8ò¦¾º-
+psquid:S00117B"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷½‰£8ò¦¾º-
+W"squid:SwitchLastCaseIsDefaultCheck.""Add a default case to this switch.(ÁÅ®8ò¦¾º-
+psquid:S00117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ¹·‘8Â‹ºº-
+Wsquid:S3400C"9Remove this method and declare a constant for this value.(È¸å8ªÎº-
+psquid:S00117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ¹·‘8ò¦¾º-
+}squid:S1149J"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰8ò¦¾º-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÖÌÂØ8ò¦¾º-
+usquid:S00117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶ı¯’ûÿÿÿÿ8ò¦¾º-
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(î›Ïí8ò¦¾º-
+osquid:S00117Z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó•ì8ò¦¾º-

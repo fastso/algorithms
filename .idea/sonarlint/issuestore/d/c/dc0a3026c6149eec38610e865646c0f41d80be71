@@ -1,0 +1,53 @@
+
+3squid:S3626Í"Remove this redundant jump.(ÉŠ©ƒ
+p
+squid:S135İ"YReduce the total number of break and continue statements in this loop to use at most one.(¦Õıú
+jsquid:S00117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Í™
+jsquid:S3776£"RRefactor this method to reduce its Cognitive Complexity from 60 to the 15 allowed.(¯ö¼ú
+Usquid:S1197î"8Move the array designator from the variable to the type.(É³èÖşÿÿÿÿ
+esquid:UselessImportCheck":Remove this unused import 'java.util.logging.FileHandler'.(—­—å8¥óéã±-
+u
+squid:S135ï"YReduce the total number of break and continue statements in this loop to use at most one.(â¶Õşÿÿÿÿÿ
+osquid:S00117²"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÃ…”şÿÿÿÿ
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Şİ¢¬ıÿÿÿÿ
+Bsquid:S1659q"Declare "j" on a separate line.(á”æåşÿÿÿÿ8ÏÂ¸-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(Œãõ×ıÿÿÿÿ8ÏÂ¸-
+Bsquid:S1659$"Declare "n" on a separate line.(½ªÌ•ÿÿÿÿÿ8ÏÂ¸-
+Vsquid:S2130="8Use "Long.parseLong" for this string-to-long conversion.(áö«•8ÏÂ¸-
+3squid:S3626Õ"Remove this redundant jump.(ÉŠ©ƒ
+p
+squid:S135ª"YReduce the total number of break and continue statements in this loop to use at most one.(Ñ·½À
+jsquid:S00117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À±±
+jsquid:S00117Ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—½’é
+bsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ØòÎÃ
+p
+squid:S135µ"YReduce the total number of break and continue statements in this loop to use at most one.(Ñ·½À
+^squid:S1854j";Remove this useless assignment to local variable "newFile".(Ğß¥‹üÿÿÿÿ8²Š÷ã±-
+Fsquid:S1481
+"(Remove this unused "sol" local variable.(Ü†Ùú8şºĞÂ¸-
+asquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(±…’p
+;squid:S1659#"Declare "j" on a separate line.(á”æåşÿÿÿÿ
+p
+squid:S135¾"YReduce the total number of break and continue statements in this loop to use at most one.(ÎÖèç
+jsquid:S00117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê ÿ
+]squid:S1126"AReplace this if-then-else statement by a single return statement.(ÇŒÈÏÿÿÿÿÿ
+3squid:S3626È"Remove this redundant jump.(ÉŠ©ƒ
+jsquid:S00117İ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©¼çé
+^squid:S1126ˆ"AReplace this if-then-else statement by a single return statement.(Ä§Ääûÿÿÿÿ
+Ksquid:S2864"4Iterate over the "entrySet" instead of the "keySet".(òä'
+jsquid:S00117Ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğÍ—²
+3squid:S3626Ò"Remove this redundant jump.(ÉŠ©ƒ
+Usquid:S1854
+"7Remove this useless assignment to local variable "sol".(Ü†Ùú8şºĞÂ¸-
+osquid:S00117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïï‚¯úÿÿÿÿ
+isquid:S00117ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿõòl
+jsquid:S00117¿"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”ä‚
+Osquid:S1481j",Remove this unused "newFile" local variable.(Ğß¥‹üÿÿÿÿ8²Š÷ã±-
+jsquid:S00117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î×›™
+jsquid:S3776í"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(î×›™
+jsquid:S00117¬"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚·Ë
+jsquid:S00117Î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ¼Çï
+osquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©öÒùÿÿÿÿ
+d
+squid:S899j"BDo something with the "boolean" value returned by "createNewFile".(Ğß¥‹üÿÿÿÿ8²Š÷ã±-

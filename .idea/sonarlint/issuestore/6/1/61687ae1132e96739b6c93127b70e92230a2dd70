@@ -1,0 +1,20 @@
+
+‹ squid:ForLoopCounterChangedCheckJ"XRefactor the code in order to not assign to this loop counter from within the loop body.(‚úé´8ıÚÅ±-
+‹ squid:ForLoopCounterChangedCheckB"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ô©¸¤8¾˜Æ±-
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 51 to the 15 allowed.(ä²¶8äüÄ±-
+Ksquid:S1604b"(Make this anonymous inner class a lambda(í­£Šüÿÿÿÿ8¶™ù±-
+{
+squid:S135"YReduce the total number of break and continue statements in this loop to use at most one.(Õüİ©øÿÿÿÿ8ÍÑğ±-
+_squid:UselessImportCheck"4Remove this unused import 'java.util.stream.Stream'.(ó÷”8óêùœ±-
+Š squid:ForLoopCounterChangedCheckR"XRefactor the code in order to not assign to this loop counter from within the loop body.(¯øŠ%8şï±-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(’¢Œ8‚º±-
+‹ squid:ForLoopCounterChangedCheck2"XRefactor the code in order to not assign to this loop counter from within the loop body.(“ıÛ8îÇ±-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(˜ø°§8 ›±-
+ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(ª·ÅÜÿÿÿÿÿ8‡²ü±-
+usquid:S00117~"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰ğ‹Ñûÿÿÿÿ8¶™ù±-
+‹ squid:ForLoopCounterChangedCheck:"XRefactor the code in order to not assign to this loop counter from within the loop body.(É‹ ‘8™ÚÆ±-
+ squid:ForLoopCounterChangedCheck""XRefactor the code in order to not assign to this loop counter from within the loop body.(Ã°¶Éüÿÿÿÿ8®˜È±-
+‹ squid:ForLoopCounterChangedCheck*"XRefactor the code in order to not assign to this loop counter from within the loop body.(§‚àö8¤äÇ±-
+Š squid:ForLoopCounterChangedCheckY"XRefactor the code in order to not assign to this loop counter from within the loop body.(¯øŠ%8İÇé±-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(©îÉüÿÿÿÿ8¹®»±-
